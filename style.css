@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    --light-blue:  #95bef4;
+    --dark-blue: #5F6DF2;
+    --white : #FFFFFF;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    background-color: linear-gradient(175deg, var(--dark-blue) 0%, var(--dark-blue) 40%, var(--light-blue) 100%);
+}
+  
+::-webkit-scrollbar-thumb {
+    background: gray;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./images/background.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-family: 'Lato', sans-serif;
+
+}
+
+.phone {
+    width: min(400px, 100%);
+    height: min(800px, 90%);
+    z-index: 1337;
+    background-color: var(--dark-blue);
+    background-image: linear-gradient(175deg, var(--dark-blue) 0%, var(--dark-blue) 40%, var(--light-blue) 100%);
+    border-radius: 30px;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 50px;
+    width: 100%;
+}
+
+.rightIcons i{
+    margin: 5px;
+}
+.input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+
+.input button {
+    width: 30%;
+    height: 55px;
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-radius: 20px;
+    font-family: 'Lato', sans-serif;
+}
+
+.input i {
+    font-size: 28px;
+}
+
+#weather {
+    text-align: center;
+}
+
+#weather h4 {
+    margin: 20px;
+}
+
+.place p{
+    color: rgb(231, 225, 225);
+}
+
+.place h2 i {
+    margin: 10px;
+}
+
+#seacher {
+    display: none;
+    overflow-y: scroll;
+    width: 100%;
+    height: 80%;
+    margin: 0px;
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+}
+
+#seacher input {
+    width: 98%;
+    height: 60px;
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid var(--white);
+}
+
+#seacher input:focus {
+    border: 1px solid var(--white);
+}
+
+#seacher p {
+    text-align: left;
+    height: auto;
+    margin-top: 20px;
+    font-size: 24px;
+}

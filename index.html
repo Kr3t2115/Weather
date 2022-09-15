@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Weather</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/92551ee9a9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.iconify.design/3/3.0.0/iconify.min.js"></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="phone">
+      <header>
+        <h4 id="time"></h4>
+        <div class="rightIcons">
+          <i class="fa-sharp fa-solid fa-signal"></i>
+          <i class="fa-sharp fa-solid fa-wifi"></i>
+          <i class="fa-sharp fa-solid fa-battery-full"></i>
+        </div>
+      </header>
+
+      <div class="input">
+        <button class="default" onclick="sendRequest('onload')">
+          Default Location
+        </button>
+        <i
+          class="fa-sharp fa-solid fa-magnifying-glass"
+          onclick="openSearch()"
+        ></i>
+      </div>
+
+      <div id="weather">
+        <div class="place">
+          <h2 id="place" style="text-align: center">
+            <i class="fa-sharp fa-solid fa-location-pin"></i>
+          </h2>
+          <p id="date">Data from:</p>
+        </div>
+
+        <h4>
+          <span id="maxTemp">Max: </span> /
+          <span id="minTemp">Min: </span>
+          <br />
+        </h4>
+        <h4 id="feelTemp">Feels like:</h4>
+
+        <h4 id="temp">Temp now:</h4>
+        <span
+          class="iconify"
+          id="icon"
+          data-width="200"
+          data-height="200"
+        ></span>
+
+        <h4 id="sunrise"></h4>
+        <h4 id="sunset"></h4>
+      </div>
+
+      <div id="seacher">
+        <input type="text" onkeyup="searchCity()" id="searchCity" />
+        <div id="allCities"></div>
+      </div>
+    </div>
+  </body>
+</html>
